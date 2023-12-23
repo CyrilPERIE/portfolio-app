@@ -1,5 +1,5 @@
-import LeftColumn from './components/leftColumn/left-column'
-import RightColumn from './components/rightColumn/right-column'
+import LeftColumn from "./components/leftColumn/left-column";
+import RightColumn from "./components/rightColumn/right-column";
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <LeftColumn />
       <RightColumn />
     </main>
-  )
+  );
 }

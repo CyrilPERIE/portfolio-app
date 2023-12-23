@@ -1,11 +1,11 @@
-import ProjectSection from "./project/projet-section";
-import ResumeSection from "./resume/resume-section";
+import ProjectSection from "./projet/projet";
+import ResumeSection from "./resume/resume";
 
 export default function RightColumn() {
-    return(
-        <div className="flex-auto">
-            <ResumeSection />
-            <ProjectSection />
-        </div>
-    )
+  return (
+    <div className="flex-auto">
+      <ResumeSection />
+      <ProjectSection />
+    </div>
+  );
 }
