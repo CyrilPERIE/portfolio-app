@@ -9,9 +9,7 @@ export default function ProjectSection() {
       {state.projects.map((project) => (
         <CardProject
           key={project.title}
-          href={project.href}
-          title={project.title}
-          content={project.content}
+          {...project}
         />
       ))}
     </div>

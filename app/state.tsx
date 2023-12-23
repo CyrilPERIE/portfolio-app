@@ -46,28 +46,34 @@ export type Project = {
   content: string;
 };
 
+export enum Type {
+  Back = "Back",
+  Front = "Front",
+  Scraping = "Scraping",
+  Framework = "Framework",
+  GestionDeProjet = "Gestion de projet",
+  Données = "Données",
+  Infrastructure = "Infrastructure",
+}
+
+export enum Stack {
+  Python = "Python",
+  Java = "Java",
+  Node = "Node",
+  Scraping = "Scraping",
+  FrameworkFront = "Framework Front",
+  GestionDeProjet = "Gestion de projet",
+  Polyvalent = "Polyvalent",
+  Infrastructure = "Infrastructure",
+}
+
 export type Skill = {
   name: string;
   logoUrl: string;
   alt: string;
   href: string;
-  type:
-    | "Back"
-    | "Front"
-    | "Scraping"
-    | "Framework"
-    | "Gestion de projet"
-    | "Données"
-    | "Infrastructure";
-  stack:
-    | "Python"
-    | "Java"
-    | "Node"
-    | "Scraping"
-    | "Framework Front"
-    | "Gestion de projet"
-    | "Polyvalent"
-    | "Infrastructure";
+  type: Type;
+  stack: Stack;
 };
 
 export type SoftSkill = {
@@ -114,8 +120,8 @@ const Java: Skill = {
   logoUrl: "",
   alt: "java_logo",
   href: "https://www.java.com/fr/",
-  type: "Back",
-  stack: "Java",
+  type: Type.Back,
+  stack: Stack.Java,
 };
 
 const H2: Skill = {
@@ -123,8 +129,8 @@ const H2: Skill = {
   logoUrl: "",
   alt: "h2_logo",
   href: "https://www.h2database.com/html/main.html",
-  type: "Données",
-  stack: "Java",
+  type: Type.Données,
+  stack: Stack.Java,
 };
 
 const Vue: Skill = {
@@ -132,8 +138,8 @@ const Vue: Skill = {
   logoUrl: "",
   alt: "vue_logo",
   href: "https://vuejs.org/",
-  type: "Front",
-  stack: "Framework Front",
+  type: Type.Front,
+  stack: Stack.FrameworkFront,
 };
 
 const Angular: Skill = {
@@ -141,8 +147,8 @@ const Angular: Skill = {
   logoUrl: "",
   alt: "angular_logo",
   href: "https://angular.io/",
-  type: "Front",
-  stack: "Framework Front",
+  type: Type.Front,
+  stack: Stack.FrameworkFront,
 };
 
 const React: Skill = {
@@ -150,8 +156,8 @@ const React: Skill = {
   logoUrl: "",
   alt: "react_logo",
   href: "https://fr.legacy.reactjs.org/",
-  type: "Front",
-  stack: "Framework Front",
+  type: Type.Front,
+  stack: Stack.FrameworkFront,
 };
 
 const Next: Skill = {
@@ -159,8 +165,8 @@ const Next: Skill = {
   logoUrl: "",
   alt: "next_logo",
   href: "https://nextjs.org/",
-  type: "Front",
-  stack: "Framework Front",
+  type: Type.Front,
+  stack: Stack.FrameworkFront,
 };
 
 const Hibernate: Skill = {
@@ -168,8 +174,8 @@ const Hibernate: Skill = {
   logoUrl: "",
   alt: "hibernate_logo",
   href: "https://hibernate.org/",
-  type: "Données",
-  stack: "Java",
+  type: Type.Données,
+  stack: Stack.Java,
 };
 
 const ELK: Skill = {
@@ -177,8 +183,8 @@ const ELK: Skill = {
   logoUrl: "",
   alt: "elk_logo",
   href: "https://www.elastic.co/fr/elastic-stack/",
-  type: "Données",
-  stack: "Polyvalent",
+  type: Type.Données,
+  stack: Stack.Polyvalent,
 };
 
 const Spring: Skill = {
@@ -186,8 +192,8 @@ const Spring: Skill = {
   logoUrl: "",
   alt: "spring_logo",
   href: "https://spring.io/",
-  type: "Framework",
-  stack: "Java",
+  type: Type.Framework,
+  stack: Stack.Java,
 };
 
 const Puppeteer: Skill = {
@@ -195,8 +201,8 @@ const Puppeteer: Skill = {
   logoUrl: "",
   alt: "puppeteer_logo",
   href: "https://pptr.dev/",
-  type: "Scraping",
-  stack: "Scraping",
+  type: Type.Scraping,
+  stack: Stack.Scraping,
 };
 
 const Katalon: Skill = {
@@ -204,8 +210,8 @@ const Katalon: Skill = {
   logoUrl: "",
   alt: "katalon_logo",
   href: "https://katalon.com/",
-  type: "Scraping",
-  stack: "Scraping",
+  type: Type.Scraping,
+  stack: Stack.Scraping,
 };
 
 const Selenium: Skill = {
@@ -213,8 +219,8 @@ const Selenium: Skill = {
   logoUrl: "",
   alt: "selenium_logo",
   href: "https://www.selenium.dev/",
-  type: "Scraping",
-  stack: "Scraping",
+  type: Type.Scraping,
+  stack: Stack.Scraping,
 };
 
 const Playwright: Skill = {
@@ -222,8 +228,8 @@ const Playwright: Skill = {
   logoUrl: "",
   alt: "playwright_logo",
   href: "https://playwright.dev/",
-  type: "Scraping",
-  stack: "Scraping",
+  type: Type.Scraping,
+  stack: Stack.Scraping,
 };
 
 const Python: Skill = {
@@ -231,8 +237,8 @@ const Python: Skill = {
   logoUrl: "",
   alt: "python_logo",
   href: "https://www.python.org/",
-  type: "Back",
-  stack: "Python",
+  type: Type.Back,
+  stack: Stack.Python,
 };
 
 const Flask: Skill = {
@@ -240,8 +246,8 @@ const Flask: Skill = {
   logoUrl: "",
   alt: "flask_logo",
   href: "https://flask.palletsprojects.com/en/3.0.x/",
-  type: "Back",
-  stack: "Python",
+  type: Type.Back,
+  stack: Stack.Python,
 };
 
 const Fast: Skill = {
@@ -249,8 +255,8 @@ const Fast: Skill = {
   logoUrl: "",
   alt: "fast_logo",
   href: "https://fastapi.tiangolo.com/",
-  type: "Back",
-  stack: "Python",
+  type: Type.Back,
+  stack: Stack.Python,
 };
 
 const NumPy: Skill = {
@@ -258,8 +264,8 @@ const NumPy: Skill = {
   logoUrl: "",
   alt: "numpy_logo",
   href: "https://numpy.org/",
-  type: "Données",
-  stack: "Python",
+  type: Type.Données,
+  stack: Stack.Python,
 };
 
 const Pandas: Skill = {
@@ -267,8 +273,8 @@ const Pandas: Skill = {
   logoUrl: "",
   alt: "pandas_logo",
   href: "https://pandas.pydata.org/",
-  type: "Données",
-  stack: "Python",
+  type: Type.Données,
+  stack: Stack.Python,
 };
 
 const SKlearn: Skill = {
@@ -276,8 +282,8 @@ const SKlearn: Skill = {
   logoUrl: "",
   alt: "sklearn_logo",
   href: "https://scikit-learn.org/stable/",
-  type: "Données",
-  stack: "Python",
+  type: Type.Données,
+  stack: Stack.Python,
 };
 
 const Node: Skill = {
@@ -285,8 +291,8 @@ const Node: Skill = {
   logoUrl: "",
   alt: "node_logo",
   href: "https://nodejs.org/",
-  type: "Back",
-  stack: "Node",
+  type: Type.Back,
+  stack: Stack.Node,
 };
 
 const Express: Skill = {
@@ -294,8 +300,8 @@ const Express: Skill = {
   logoUrl: "",
   alt: "express_logo",
   href: "https://expressjs.com/fr/api.html",
-  type: "Back",
-  stack: "Node",
+  type: Type.Back,
+  stack: Stack.Node,
 };
 
 const Git: Skill = {
@@ -303,8 +309,8 @@ const Git: Skill = {
   logoUrl: "",
   alt: "git_logo",
   href: "https://git-scm.com/",
-  type: "Gestion de projet",
-  stack: "Gestion de projet",
+  type: Type.GestionDeProjet,
+  stack: Stack.GestionDeProjet,
 };
 
 const GitLab: Skill = {
@@ -312,8 +318,8 @@ const GitLab: Skill = {
   logoUrl: "",
   alt: "gitlab_logo",
   href: "https://about.gitlab.com/",
-  type: "Gestion de projet",
-  stack: "Gestion de projet",
+  type: Type.GestionDeProjet,
+  stack: Stack.GestionDeProjet,
 };
 
 const Jira: Skill = {
@@ -321,8 +327,8 @@ const Jira: Skill = {
   logoUrl: "",
   alt: "jira_logo",
   href: "https://www.atlassian.com/fr/software/jira",
-  type: "Gestion de projet",
-  stack: "Gestion de projet",
+  type: Type.GestionDeProjet,
+  stack: Stack.GestionDeProjet,
 };
 
 const MySQL: Skill = {
@@ -330,8 +336,8 @@ const MySQL: Skill = {
   logoUrl: "",
   alt: "mysql_logo",
   href: "https://www.mysql.com/fr/",
-  type: "Données",
-  stack: "Polyvalent",
+  type: Type.Données,
+  stack: Stack.Polyvalent,
 };
 
 const SQL: Skill = {
@@ -339,8 +345,8 @@ const SQL: Skill = {
   logoUrl: "",
   alt: "sql_logo",
   href: "https://sql.sh/",
-  type: "Données",
-  stack: "Polyvalent",
+  type: Type.Données,
+  stack: Stack.Polyvalent,
 };
 
 const AWS: Skill = {
@@ -348,8 +354,8 @@ const AWS: Skill = {
   logoUrl: "",
   alt: "aws_logo",
   href: "https://aws.amazon.com/fr/",
-  type: "Infrastructure",
-  stack: "Infrastructure",
+  type: Type.Infrastructure,
+  stack: Stack.Infrastructure,
 };
 
 const Docker: Skill = {
@@ -357,8 +363,8 @@ const Docker: Skill = {
   logoUrl: "",
   alt: "docker_logo",
   href: "https://www.docker.com/",
-  type: "Infrastructure",
-  stack: "Infrastructure",
+  type: Type.Infrastructure,
+  stack: Stack.Infrastructure,
 };
 
 export const state: stateModel = {

@@ -9,12 +9,7 @@ export default function ResumeSection() {
       {state.resume.sort((a, b) => +b.startingDate - +a.startingDate).map((experience) => (
         <CardExperience
           key={experience.href}
-          href={experience.href}
-          startingDate={experience.startingDate}
-          endingDate={experience.endingDate}
-          job={experience.job}
-          company={experience.company}
-          description={experience.description}
+          {...experience}
         />
       ))}
     </div>
