@@ -456,10 +456,10 @@ export const state: stateModel = {
       endingDate: new Date(2018, 7),
       job: "Développeur Python",
       company: ClubMed,
-      description: `Première découverte du monde informatique, je réalise des scripts au besoin pour l'équipe à laquelle je suis intégrée.
-            - Gestion de données
-            - Web Scraping
-            - Manipulation de fichiers Excel`,
+      description: `<p>Première découverte du monde informatique, je réalise des scripts au besoin pour l'équipe à laquelle je suis intégrée.</br>
+            - Gestion de données</br>
+            - Web Scraping</br>
+            - Manipulation de fichiers Excel</p>`,
     },
     {
       href: ClubMed.href,
@@ -467,12 +467,12 @@ export const state: stateModel = {
       endingDate: new Date(2022, 9),
       job: "Techlead développeur QA",
       company: ClubMed,
-      description: `J'interviens sur différents outils internes Club Med pour mettre en place des tests automatiques fonctionnels de non régression et les intégrer aux processus de mise en production:
-            - Choix des outils à utiliser
-            - Mise en place de l'usine logicielle
-            - Mise en place des parcours de test
-            - Développement des différents parcours
-            - Mise en place des processus de développement`,
+      description: `<p>J'interviens sur différents outils internes Club Med pour mettre en place des tests automatiques fonctionnels de non régression et les intégrer aux processus de mise en production:</br>
+            - Choix des outils à utiliser</br>
+            - Mise en place de l'usine logicielle</br>
+            - Mise en place des parcours de test</br>
+            - Développement des différents parcours</br>
+            - Mise en place des processus de développement</p>`,
     },
     {
       href: Oxyl.href,
@@ -480,9 +480,9 @@ export const state: stateModel = {
       endingDate: new Date(2022, 11),
       job: "Ingénieur Full Stack",
       company: Oxyl,
-      description: `Intervention sur un outil interne d'aide au développement commercial et recrutement d'Oxyl. 
-            Nous récupérons des informations sur des sites à l'aide de scraper afin de récupérer des informations sur des sociétés et des profils de potentiels candidats.
-            Ces informations sont évaluées et si pertinentes elles sont envoyées sur des interfaces pour recruteurs ou comerciaux.`,
+      description: `<p>Intervention sur un outil interne d'aide au développement commercial et recrutement d'Oxyl.</br>
+            Nous récupérons des informations sur des sites à l'aide de scraper afin de récupérer des informations sur des sociétés et des profils de potentiels candidats.</br>
+            Ces informations sont évaluées et si pertinentes elles sont envoyées sur des interfaces pour recruteurs ou comerciaux.</p>`,
     },
     {
       href: Wedia.href,
@@ -490,33 +490,34 @@ export const state: stateModel = {
       endingDate: new Date(2023, 7),
       job: "Ingénieur Full stack",
       company: Wedia,
-      description: `J'interviens sur l'outils phare développé et maintenu par Wedia, un DAM (Data Access Management).
-        Respect récurrent de dead-lines courtes grâce à des pics de charge.
-        - Création/modification des plugins Gradle afin de traiter automatiquement certaines tâches ou modifications de données, ou alors l'envoi de mails générés automatiquement à l'aide de template.
-        - Montées de version du Front et du Back-Office en gardant la compatibilité ascendante.
-        - Livraisons en intégration et en pré-prod (Déploiements d’archives avec création et configuration suivant le contexte/cible).
-        - Création/maintenance de documentation pour assurer la passation/unité de connaissances.`,
+      description: `<p>J'interviens sur l'outils phare développé et maintenu par Wedia, un DAM (Data Access Management).</br>
+        Respect récurrent de dead-lines courtes grâce à des pics de charge.</br>
+        - Création/modification des plugins Gradle afin de traiter automatiquement certaines tâches ou modifications de données, ou alors l'envoi de mails générés automatiquement à l'aide de template.</br>
+        - Montées de version du Front et du Back-Office en gardant la compatibilité ascendante.</br>
+        - Livraisons en intégration et en pré-prod (Déploiements d’archives avec création et configuration suivant le contexte/cible).</br>
+        - Création/maintenance de documentation pour assurer la passation/unité de connaissances.</p>`,
     },
     {
       href: Oxyl.href,
       startingDate: new Date(2023, 8),
       job: "Ingénieur Full stack",
       company: Oxyl,
-      description: `J'arrive à l'initialisation d'un projet à but d'aider les personnes à s'autoformer.
-        Cette application est en interaction avec des IA génératives.
-        Si je souhaite me préparer à un entretien, découvrir une technologie, valider mes connaissances,... je peux intéragir avec les IA qui me feront un retour ou me généreront un programme et seront capables de m'interroger et me corriger.
-        J'interviens sur:
-        - La mise en place des bonnes pratiques
-        - Choix des technologies, priorisation, solutions techniques
-        - Développement des différents serveur.
-        - Participation aux événements de la vie de projet dans un contexte d'agilité.`,
+      description: `<p>J'arrive à l'initialisation d'un projet à but d'aider les personnes à s'autoformer.</br>
+        Cette application est en interaction avec des IA génératives.</br>
+        Si je souhaite me préparer à un entretien, découvrir une technologie, valider mes connaissances,... je peux intéragir avec les IA qui me feront un retour ou me généreront un programme et seront capables de m'interroger et me corriger.</br>
+        J'interviens sur:</br>
+        - La mise en place des bonnes pratiques</br>
+        - Choix des technologies, priorisation, solutions techniques</br>
+        - Développement des différents serveur.</br>
+        - Participation aux événements de la vie de projet dans un contexte d'agilité.</p>`,
     },
   ],
   projects: [
     {
       href: "https://www.myneurofactory.fr/",
       title: "MyNeuroFactory",
-      content: `Site de validation de compétences. Il est possible d'apprendre via des cours, TP disponibles sur la plateforme puis de se tester via des QCM journaliers.`,
+      content: `Site de validation de compétences.</br>
+        Il est possible d'apprendre via des cours, TP disponibles sur la plateforme puis de se tester via des QCM journaliers.`,
     },
   ],
 };

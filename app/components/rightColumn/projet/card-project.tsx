@@ -14,7 +14,7 @@ export default function CardProject(project: Project) {
           -&gt;
         </span>
       </h2>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>{project.content}</p>
+      <p className={`text-sm`}>{project.content}</p>
     </a>
   );
 }
