@@ -8,7 +8,7 @@ export default function TechnosSection() {
   return (
     <div>
       {skillGroupeByStackEntries.map((stack) => (
-        <div key={stack}>
+        <div className="flex flex-row" key={stack}>
           {stack}
           {skillGroupeByStack[stack].map((skill: Skill) => (
             <TechnoCard key={skill.name} {...skill} />

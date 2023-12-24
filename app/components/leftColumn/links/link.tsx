@@ -3,11 +3,14 @@ import LinkCard from "./link-card";
 
 export default function LinksSection() {
   return (
-    <div className="flex text-center" style={{ width: "inherit" }}>
+    <div style={{ width: "inherit" }}>
       {state.me.links.map((link) => (
         <LinkCard key={link.name} {...link} />
       ))}
-      <a href="mailto:cyril.perie96@gmail.com" className="inline-block">
+      <a
+        href="mailto:cyril.perie96@gmail.com"
+        className="inline-block"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="54"

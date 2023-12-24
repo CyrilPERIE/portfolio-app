@@ -3,7 +3,12 @@ import Image from "next/image";
 
 export default function LinkCard(link: Link) {
   return (
-    <a href={link.href} className="inline-block">
+    <a
+      href={link.href}
+      className="inline-block"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={link.logoUrl}
         alt={link.alt}

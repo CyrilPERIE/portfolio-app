@@ -3,7 +3,7 @@ import RightColumn from "./components/rightColumn/right-column";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-row">
+    <main className="min-h-screen flex flex-row">
       <LeftColumn />
       <RightColumn />
     </main>

@@ -5,7 +5,7 @@ export default function ProjectSection() {
   return (
     <div>
       <h1>Projets</h1>
-    <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+    <div className="grid max-w-5xl w-full mb-0 grid-cols-4 text-left">
       {state.projects.map((project) => (
         <CardProject
           key={project.title}
