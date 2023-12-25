@@ -1,11 +1,19 @@
-import LeftColumn from "./components/leftColumn/left-column";
-import RightColumn from "./components/rightColumn/right-column";
+import AboutMe from "./components/about-me/aboutMe";
+import Experience from "./components/experience/experience";
+import Footer from "./components/footer/footer";
+import Menu from "./components/menu/menu";
+import Projets from "./components/projets/projets";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-row">
-      <LeftColumn />
-      <RightColumn />
+    <main className="flex flex-col">
+      <AboutMe />
+      <div>
+        <Menu />
+        <Experience />
+        <Projets />
+        <Footer />
+      </div>
     </main>
   );
 }
