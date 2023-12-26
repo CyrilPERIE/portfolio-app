@@ -10,7 +10,7 @@ export default function AboutMe() {
     </ul>`
     
     return(
-        <div className="h-screen bg-[url('/assets/about-me.png')]">
+        <div className="h-screen bg-[url('/assets/about-me.png')] bg-cover">
             <div className="bg-white size-2/6 absolute left-1/2 top-24 flex flex-col items-center justify-center">
                 <h1>{state.me.name}</h1>
                 <h2>{state.me.wantedJob}</h2>
