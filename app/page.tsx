@@ -23,7 +23,7 @@ export default function Home() {
                 style={{
                   width: "64px",
                   filter:
-                    "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%);",
+                    "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)",
                 }}
               />
             </a>
