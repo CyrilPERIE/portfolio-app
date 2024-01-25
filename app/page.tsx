@@ -5,7 +5,7 @@ import { state } from "./state";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen text-font-color custom:flex-row">
+    <main className="pr-2 scrollbar overflow-y-auto flex flex-col text-font-color custom:flex-row">
       <div className="bg-bg-color h-screen flex flex-col justify-between custom:w-[650px] custom:fixed custom:top-0">
         <div className="ml-[18.5%] mt-3">
           <h1>{state.me.name}</h1>

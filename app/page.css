@@ -21,3 +21,11 @@ p {
     font-size: 14px;
     font-weight: 400;
 }
+
+.scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #2A748B;
+  }
