@@ -16,6 +16,7 @@ export default function Home() {
         <div className="flex flex-row gap-4 justify-center w-full pb-3">
           {state.me.links.map((link, index) => (
             <a key={index} href={link.href} target="_blank">
+              
               {/* https://codepen.io/sosuke/pen/Pjoqqp si jamais la couleur des svg lien doit changer pour mettre à jour le filter.*/}
               <img
                 src={link.logoUrl}
