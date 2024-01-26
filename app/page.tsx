@@ -6,7 +6,7 @@ import { state } from "./state";
 export default function Home() {
   return (
     <main className="pr-2 scrollbar overflow-y-auto flex flex-col text-font-color custom:flex-row">
-      <div className="bg-bg-color h-screen flex flex-col justify-between custom:w-[650px] custom:fixed custom:top-0">
+      <div className="bg-bg-color h-[50vh] flex flex-col justify-between custom:h-screen custom:w-[650px] custom:fixed custom:top-0">
         <div className="ml-[18.5%] mt-3">
           <h1>{state.me.name}</h1>
           <h2>{state.me.wantedJob}</h2>
@@ -31,18 +31,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-screen custom:w-[700px] custom:ml-[650px]">
+      <div className="h-screen custom:w-[700px] custom:ml-[650px] p-[30px]">
         <div>
           <p>{state.me.professionalContext}</p>
         </div>
 
-        <div>
-          <h1>Experience</h1>
+        <div className="mt-[10px]">
+          <h1 className="mb-[5px]">Experience</h1>
           {state.resume
             .sort((a, b) => +b.startingDate - +a.startingDate)
             .map((experience) => (
               <ExperienceCard key={experience.href} {...experience} />
             ))}
+            <div className="flex items-center">
+            <a className="font-semibold underline" href="/files/Cyril_PERIE_CV.pdf" download="Cyril_PERIE_CV.pdf">Récupérez mon cv</a>
+            <img className="h-[64px]" src="/assets/cv.svg" alt="CV" />
+            </div>
         </div>
 
         <div>

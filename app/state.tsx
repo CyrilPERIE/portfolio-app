@@ -38,12 +38,17 @@ export type Experience = {
   job: string;
   company: Company;
   description: string;
+  skills: Skill[];
 };
 
 export type Project = {
   href: string;
   title: string;
+  spitch: string;
   content: string;
+  screenshot: string;
+  alt: string;
+  skills: Skill[];
 };
 
 export enum Type {
@@ -69,8 +74,6 @@ export enum Stack {
 
 export type Skill = {
   name: string;
-  logoUrl: string;
-  alt: string;
   href: string;
   type: Type;
   stack: Stack;
@@ -117,8 +120,6 @@ const Wedia: Company = {
 
 const Java: Skill = {
   name: "Java",
-  logoUrl: "",
-  alt: "java_logo",
   href: "https://www.java.com/fr/",
   type: Type.Back,
   stack: Stack.Java,
@@ -126,8 +127,6 @@ const Java: Skill = {
 
 const H2: Skill = {
   name: "H2",
-  logoUrl: "",
-  alt: "h2_logo",
   href: "https://www.h2database.com/html/main.html",
   type: Type.Données,
   stack: Stack.Java,
@@ -135,8 +134,6 @@ const H2: Skill = {
 
 const Vue: Skill = {
   name: "Vue",
-  logoUrl: "",
-  alt: "vue_logo",
   href: "https://vuejs.org/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
@@ -144,8 +141,6 @@ const Vue: Skill = {
 
 const Angular: Skill = {
   name: "Angular",
-  logoUrl: "",
-  alt: "angular_logo",
   href: "https://angular.io/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
@@ -153,8 +148,6 @@ const Angular: Skill = {
 
 const React: Skill = {
   name: "React",
-  logoUrl: "",
-  alt: "react_logo",
   href: "https://fr.legacy.reactjs.org/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
@@ -162,8 +155,6 @@ const React: Skill = {
 
 const Next: Skill = {
   name: "Next",
-  logoUrl: "",
-  alt: "next_logo",
   href: "https://nextjs.org/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
@@ -171,8 +162,6 @@ const Next: Skill = {
 
 const Hibernate: Skill = {
   name: "Hibernate",
-  logoUrl: "",
-  alt: "hibernate_logo",
   href: "https://hibernate.org/",
   type: Type.Données,
   stack: Stack.Java,
@@ -180,8 +169,6 @@ const Hibernate: Skill = {
 
 const ELK: Skill = {
   name: "ELK",
-  logoUrl: "",
-  alt: "elk_logo",
   href: "https://www.elastic.co/fr/elastic-stack/",
   type: Type.Données,
   stack: Stack.Polyvalent,
@@ -189,8 +176,6 @@ const ELK: Skill = {
 
 const Spring: Skill = {
   name: "Spring",
-  logoUrl: "",
-  alt: "spring_logo",
   href: "https://spring.io/",
   type: Type.Framework,
   stack: Stack.Java,
@@ -198,8 +183,6 @@ const Spring: Skill = {
 
 const Puppeteer: Skill = {
   name: "Puppeteer",
-  logoUrl: "",
-  alt: "puppeteer_logo",
   href: "https://pptr.dev/",
   type: Type.Scraping,
   stack: Stack.Scraping,
@@ -207,8 +190,6 @@ const Puppeteer: Skill = {
 
 const Katalon: Skill = {
   name: "Katalon",
-  logoUrl: "",
-  alt: "katalon_logo",
   href: "https://katalon.com/",
   type: Type.Scraping,
   stack: Stack.Scraping,
@@ -216,8 +197,6 @@ const Katalon: Skill = {
 
 const Selenium: Skill = {
   name: "Selenium",
-  logoUrl: "",
-  alt: "selenium_logo",
   href: "https://www.selenium.dev/",
   type: Type.Scraping,
   stack: Stack.Scraping,
@@ -225,8 +204,6 @@ const Selenium: Skill = {
 
 const Playwright: Skill = {
   name: "Playwright",
-  logoUrl: "",
-  alt: "playwright_logo",
   href: "https://playwright.dev/",
   type: Type.Scraping,
   stack: Stack.Scraping,
@@ -234,8 +211,6 @@ const Playwright: Skill = {
 
 const Python: Skill = {
   name: "Python",
-  logoUrl: "",
-  alt: "python_logo",
   href: "https://www.python.org/",
   type: Type.Back,
   stack: Stack.Python,
@@ -243,8 +218,6 @@ const Python: Skill = {
 
 const Flask: Skill = {
   name: "Flask",
-  logoUrl: "",
-  alt: "flask_logo",
   href: "https://flask.palletsprojects.com/en/3.0.x/",
   type: Type.Back,
   stack: Stack.Python,
@@ -252,8 +225,6 @@ const Flask: Skill = {
 
 const Fast: Skill = {
   name: "Fast",
-  logoUrl: "",
-  alt: "fast_logo",
   href: "https://fastapi.tiangolo.com/",
   type: Type.Back,
   stack: Stack.Python,
@@ -261,8 +232,6 @@ const Fast: Skill = {
 
 const NumPy: Skill = {
   name: "NumPy",
-  logoUrl: "",
-  alt: "numpy_logo",
   href: "https://numpy.org/",
   type: Type.Données,
   stack: Stack.Python,
@@ -270,8 +239,6 @@ const NumPy: Skill = {
 
 const Pandas: Skill = {
   name: "Pandas",
-  logoUrl: "",
-  alt: "pandas_logo",
   href: "https://pandas.pydata.org/",
   type: Type.Données,
   stack: Stack.Python,
@@ -279,8 +246,6 @@ const Pandas: Skill = {
 
 const SKlearn: Skill = {
   name: "SKlearn",
-  logoUrl: "",
-  alt: "sklearn_logo",
   href: "https://scikit-learn.org/stable/",
   type: Type.Données,
   stack: Stack.Python,
@@ -288,8 +253,6 @@ const SKlearn: Skill = {
 
 const Node: Skill = {
   name: "Node",
-  logoUrl: "",
-  alt: "node_logo",
   href: "https://nodejs.org/",
   type: Type.Back,
   stack: Stack.Node,
@@ -297,8 +260,6 @@ const Node: Skill = {
 
 const Express: Skill = {
   name: "Express",
-  logoUrl: "",
-  alt: "express_logo",
   href: "https://expressjs.com/fr/api.html",
   type: Type.Back,
   stack: Stack.Node,
@@ -306,8 +267,6 @@ const Express: Skill = {
 
 const Git: Skill = {
   name: "Git",
-  logoUrl: "",
-  alt: "git_logo",
   href: "https://git-scm.com/",
   type: Type.GestionDeProjet,
   stack: Stack.GestionDeProjet,
@@ -315,8 +274,6 @@ const Git: Skill = {
 
 const GitLab: Skill = {
   name: "GitLab",
-  logoUrl: "",
-  alt: "gitlab_logo",
   href: "https://about.gitlab.com/",
   type: Type.GestionDeProjet,
   stack: Stack.GestionDeProjet,
@@ -324,17 +281,20 @@ const GitLab: Skill = {
 
 const Jira: Skill = {
   name: "Jira",
-  logoUrl: "",
-  alt: "jira_logo",
   href: "https://www.atlassian.com/fr/software/jira",
   type: Type.GestionDeProjet,
   stack: Stack.GestionDeProjet,
 };
 
+const Maven: Skill = {
+  name: "Maven",
+  href: "https://maven.apache.org/",
+  type: Type.Infrastructure,
+  stack: Stack.Java,
+};
+
 const MySQL: Skill = {
   name: "MySQL",
-  logoUrl: "",
-  alt: "mysql_logo",
   href: "https://www.mysql.com/fr/",
   type: Type.Données,
   stack: Stack.Polyvalent,
@@ -342,8 +302,6 @@ const MySQL: Skill = {
 
 const SQL: Skill = {
   name: "SQL",
-  logoUrl: "",
-  alt: "sql_logo",
   href: "https://sql.sh/",
   type: Type.Données,
   stack: Stack.Polyvalent,
@@ -351,8 +309,6 @@ const SQL: Skill = {
 
 const AWS: Skill = {
   name: "AWS",
-  logoUrl: "",
-  alt: "aws_logo",
   href: "https://aws.amazon.com/fr/",
   type: Type.Infrastructure,
   stack: Stack.Infrastructure,
@@ -360,8 +316,6 @@ const AWS: Skill = {
 
 const Docker: Skill = {
   name: "Docker",
-  logoUrl: "",
-  alt: "docker_logo",
   href: "https://www.docker.com/",
   type: Type.Infrastructure,
   stack: Stack.Infrastructure,
@@ -460,6 +414,7 @@ export const state: stateModel = {
             - Gestion de données</br>
             - Web Scraping</br>
             - Manipulation de fichiers Excel</p>`,
+      skills: [Python, Pandas, NumPy]
     },
     {
       href: ClubMed.href,
@@ -473,6 +428,7 @@ export const state: stateModel = {
             - Mise en place des parcours de test</br>
             - Développement des différents parcours</br>
             - Mise en place des processus de développement</p>`,
+        skills: [Git, GitLab, Jira, Selenium, Katalon, Puppeteer, ELK]
     },
     {
       href: Oxyl.href,
@@ -483,6 +439,7 @@ export const state: stateModel = {
       description: `<p>Intervention sur un outil interne d'aide au développement commercial et recrutement d'Oxyl.</br>
             Nous récupérons des informations sur des sites à l'aide de scraper afin de récupérer des informations sur des sociétés et des profils de potentiels candidats.</br>
             Ces informations sont évaluées et si pertinentes elles sont envoyées sur des interfaces pour recruteurs ou comerciaux.</p>`,
+      skills: [Node, Puppeteer, Angular, Git]
     },
     {
       href: Wedia.href,
@@ -496,6 +453,7 @@ export const state: stateModel = {
         - Montées de version du Front et du Back-Office en gardant la compatibilité ascendante.</br>
         - Livraisons en intégration et en pré-prod (Déploiements d’archives avec création et configuration suivant le contexte/cible).</br>
         - Création/maintenance de documentation pour assurer la passation/unité de connaissances.</p>`,
+      skills: [Java, Vue, Git]
     },
     {
       href: Oxyl.href,
@@ -510,14 +468,18 @@ export const state: stateModel = {
         - Choix des technologies, priorisation, solutions techniques</br>
         - Développement des différents serveur.</br>
         - Participation aux événements de la vie de projet dans un contexte d'agilité.</p>`,
+        skills: [Java, Spring, Hibernate, React, Vue, Node, H2, Git, GitLab, Docker, SQL, AWS, Maven]
     },
   ],
   projects: [
     {
-      href: "https://www.myneurofactory.fr/",
-      title: "MyNeuroFactory",
-      content: `Site de validation de compétences.</br>
-        Il est possible d'apprendre via des cours, TP disponibles sur la plateforme puis de se tester via des QCM journaliers.`,
+      href: "https://galop-ai.vercel.app/",
+      title: "E-PMU",
+      spitch: "Application de statistiques hippiques",
+      content: `Basée sur l’API publique fournie par le PMU, j’ai développée des IA afin de m’aider à parier quotidiennement sur les courses hippiques. Ce projet me sert encore aujourd’hui de support pour ma veille technologique.`,
+      screenshot: "/assets/e_pmu.png",
+      alt: "e-pmu",
+      skills: [React, Next, Python, Flask, Fast, NumPy, Pandas, SKlearn, Git, GitLab, Docker, SQL, AWS, Maven]
     },
   ],
 };
