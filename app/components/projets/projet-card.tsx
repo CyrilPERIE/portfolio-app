@@ -14,8 +14,8 @@ export default function ProjetCard(projet: Project) {
       <ul className="flex flex-wrap gap-3 mt-2">
         {projet.skills
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map((skill) => (
-            <li className="bg-item-bg-color rounded-[10px] py-[3px] px-4">
+          .map((skill, index) => (
+            <li key={index} className="bg-item-bg-color rounded-[10px] py-[3px] px-4">
               <a href={skill.href} target="_blank">
                 {skill.name}
               </a>

@@ -14,8 +14,8 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row gap-4 justify-center w-full pb-3">
-          {state.me.links.map((link) => (
-            <a href={link.href} target="_blank">
+          {state.me.links.map((link, index) => (
+            <a key={index} href={link.href} target="_blank">
               {/* https://codepen.io/sosuke/pen/Pjoqqp si jamais la couleur des svg lien doit changer pour mettre à jour le filter.*/}
               <img
                 src={link.logoUrl}
@@ -40,8 +40,8 @@ export default function Home() {
           <h1 className="mb-[5px]">Experience</h1>
           {state.resume
             .sort((a, b) => +b.startingDate - +a.startingDate)
-            .map((experience) => (
-              <ExperienceCard key={experience.href} {...experience} />
+            .map((experience, index) => (
+              <ExperienceCard key={index} {...experience} />
             ))}
             <div className="flex items-center">
             <a className="font-semibold underline" href="/files/Cyril_PERIE_CV.pdf" download="Cyril_PERIE_CV.pdf">Récupérez mon cv</a>
@@ -51,8 +51,8 @@ export default function Home() {
 
         <div>
           <h1>Projets</h1>
-          {state.projects.map((projet) => (
-            <ProjetCard key={projet.href} {...projet} />
+          {state.projects.map((projet, index) => (
+            <ProjetCard key={index} {...projet} />
           ))}
         </div>
       </div>
