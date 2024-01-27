@@ -61,7 +61,7 @@ export default function RandomSkill() {
         <h2>Vous avez besoin de moi pour du</h2>{" "}
         <h2 className="bg-item-bg-color w-fit font-normal px-1">{skill}</h2>{" "}
       </div>
-      <h2>Contactez moi !</h2>
+      <h2>Entrons en contact !</h2>
     </div>
   );
 }

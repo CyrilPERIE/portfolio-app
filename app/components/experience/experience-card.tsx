@@ -4,7 +4,9 @@ import { Experience } from "@/app/state";
 export default function ExperienceCard(experience: Experience) {
   return (
     <div className="pb-[23px] pt-[11px]">
-      <h2>{experience.job}</h2>
+      <div className="flex items-baseline gap-1">
+      <h2>{experience.job}</h2><a href={experience.company.href} target="_blank"><p>- {experience.company.name}</p></a>
+      </div>
       <h3>{`${formatDateYearMonth(experience.startingDate)} - ${formatDateYearMonth(experience.endingDate)} - ${differenceBetweenTwoDates(experience.startingDate, experience.endingDate)}`}</h3>
       <div className="mt-2" dangerouslySetInnerHTML={{ __html: experience.description }} />
       <ul className="flex flex-wrap gap-3 mt-2">

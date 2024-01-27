@@ -10,7 +10,7 @@ export type Formation = {
   name: string;
   yearStarting?: number;
   yearEnding: number;
-}
+};
 
 export type Link = {
   logoUrl: string;
@@ -136,36 +136,36 @@ const TailwindCSS: Skill = {
   name: "TailwindCSS",
   href: "https://tailwindcss.com/",
   type: Type.Front,
-  stack: Stack.FrameworkFront
-}
+  stack: Stack.FrameworkFront,
+};
 
 const NextJs: Skill = {
   name: "NextJs",
   href: "https://nextjs.org/",
   type: Type.Front,
-  stack: Stack.FrameworkFront
-}
+  stack: Stack.FrameworkFront,
+};
 
 const Figma: Skill = {
   name: "Figma",
   href: "https://www.figma.com/",
   type: Type.GestionDeProjet,
-  stack: Stack.GestionDeProjet
-}
+  stack: Stack.GestionDeProjet,
+};
 
 const Vercel: Skill = {
   name: "Vercel",
   href: "https://vercel.com/",
   type: Type.Infrastructure,
-  stack: Stack.Infrastructure
-}
+  stack: Stack.Infrastructure,
+};
 
 const Gradle: Skill = {
   name: "Gradle",
   href: "https://gradle.org/",
   type: Type.Infrastructure,
-  stack: Stack.Infrastructure
-}
+  stack: Stack.Infrastructure,
+};
 
 const H2: Skill = {
   name: "H2",
@@ -178,8 +178,8 @@ const Redux: Skill = {
   name: "Redux",
   href: "https://redux.js.org/",
   type: Type.Front,
-  stack: Stack.FrameworkFront
-}
+  stack: Stack.FrameworkFront,
+};
 
 const Vue: Skill = {
   name: "Vue",
@@ -192,8 +192,8 @@ const Jenkins: Skill = {
   name: "Jenkins",
   href: "https://www.jenkins.io/",
   type: Type.Infrastructure,
-  stack: Stack.Infrastructure
-}
+  stack: Stack.Infrastructure,
+};
 
 const Angular: Skill = {
   name: "Angular",
@@ -205,13 +205,6 @@ const Angular: Skill = {
 const React: Skill = {
   name: "React",
   href: "https://fr.legacy.reactjs.org/",
-  type: Type.Front,
-  stack: Stack.FrameworkFront,
-};
-
-const Next: Skill = {
-  name: "Next",
-  href: "https://nextjs.org/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
 };
@@ -382,8 +375,13 @@ export const state: stateModel = {
     name: "Cyril PERIE",
     wantedJob: "Ingénieur informatique",
     catchPhrase: `Passionné et formé en autodidacte`,
-    professionalContext:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatum aut commodi ipsam numquam nesciunt iste, officiis dolorem modi distinctio necessitatibus quas soluta! Sit modi mollitia fuga dolore quisquam in. Quis, adipisci. Illum natus beatae reiciendis maxime voluptatibus adipisci perspiciatis! Exercitationem est quam ipsam voluptas officiis quaerat quae, libero assumenda! Repudiandae commodi quas exercitationem numquam similique nulla deleniti incidunt iste sunt sit placeat autem veritatis asperiores quam aspernatur, dolore voluptate alias delectus rerum, ipsam consequatur, velit quos. Doloremque, praesentium! Pariatur omnis non unde impedit dolorem libero, accusantium explicabo distinctio itaque corrupti repudiandae ullam velit, numquam laboriosam temporibus, veniam molestias error ipsum deserunt nemo obcaecati. Molestias animi minima placeat unde adipisci deserunt quod sapiente dolor ipsum fugiat eos delectus blanditiis, asperiores ducimus rem omnis est incidunt debitis esse molestiae obcaecati amet. Molestias iste facilis, minus adipisci, nostrum molestiae similique voluptates, ut alias soluta odio beatae temporibus facere modi exercitationem accusantium rem earum tenetur. Vero et hic ipsam? Est minima molestias voluptatibus, eaque eligendi soluta a deleniti iste enim dolores mollitia, expedita consectetur facere facilis vitae neque dolorum id unde quae? Neque architecto beatae animi minima, quidem vitae! Modi velit impedit fuga quisquam nulla, iure aliquid pariatur facere commodi porro recusandae accusamus.",
+    professionalContext: `<p>C'est à la suite d'un module Java prodigué par mon école que mon intérêt pour le développement informatique a commencé. Je suis resté dans une formation généraliste pour avoir des connaissances larges tout en me formant au développement en réalisant des petits projets ou codingames sur mon temps libre.</p></br>
+    <p>L'infomatique me permet de laisser libre cours à mon imagination pour aider ou rendre le quotidien ludique</p>
+    <p>De par la logique il est rapidement possible de faire des choses en ayant les bases, contrairement à d'autres matières où tout repose sur de la connaissance.</p>
+    <p>Cela fait maintenant 3 ans que j'ai réussi à intégrer ce milieu qui me passione et ai réussi à monter rapidement en réponsabilité dès ma première mission.</p></br>
+    <p>Si au début ma carrière était guidée par mes ambitions, cherchant à apprendre du monde professionel pour gagner en autonomie sur mon temps personnel pour mes idées, je me rends compte aujourd'hui que j'aime l'envergure et le relationnel des projets professionels.</p>
+    <p>C'est pour cela que je suis plus attiré par le projet que les technologies utilisées afin d'être entièrement stimulé dans ma créativité et motivation.</p>
+    <p>N'hésitez pas à me contacter pour toute demande professionnelle</p>`,
     certification: [
       {
         name: "OCA - Oracle Certified Associate",
@@ -404,12 +402,12 @@ export const state: stateModel = {
       {
         name: "EIGSI - Diplôme d'ingénieur généraliste Spécialité industrie 4.0",
         yearStarting: 2015,
-        yearEnding: 2021
+        yearEnding: 2021,
       },
       {
         name: "BAC S",
-        yearEnding: 2015
-      }
+        yearEnding: 2015,
+      },
     ],
     links: [
       {
@@ -447,7 +445,7 @@ export const state: stateModel = {
       React,
       Vue,
       Angular,
-      Next,
+      Fast,
       Puppeteer,
       Katalon,
       ELK,
@@ -472,7 +470,7 @@ export const state: stateModel = {
       company: ClubMed,
       description: `<p>Première découverte du monde informatique, je réalise des scripts au besoin pour l'équipe à laquelle je suis intégrée.</br>
             Gestion de données, Web Scraping, Manipulation de fichiers Excel</p>`,
-      skills: [Python, Pandas, NumPy, Selenium]
+      skills: [Python, Pandas, NumPy, Selenium],
     },
     {
       href: ClubMed.href,
@@ -486,7 +484,7 @@ export const state: stateModel = {
         en place de l'usine logicielle, mise en place des parcours de test,
         développement des différents parcours et mise en place des processus de
         développement</p>`,
-        skills: [Git, GitLab, Jira, Selenium, Katalon, Puppeteer, ELK, Jenkins]
+      skills: [Git, GitLab, Jira, Selenium, Katalon, Puppeteer, ELK, Jenkins],
     },
     {
       href: Oxyl.href,
@@ -495,9 +493,9 @@ export const state: stateModel = {
       job: "Ingénieur Full Stack",
       company: Oxyl,
       description: `<p>Intervention sur un outil interne d'aide au développement commercial et recrutement d'Oxyl.</br>
-            Nous récupérons des informations sur des sites à l'aide de scraper afin de récupérer des informations sur des sociétés et des profils de potentiels candidats.</br>
+            Nous naviguons sur des sites à l'aide de scraper afin de récupérer des informations sur des sociétés et des profils de potentiels candidats.</br>
             Ces informations sont évaluées et si pertinentes elles sont envoyées sur des interfaces pour recruteurs ou comerciaux.</p>`,
-      skills: [Node, Puppeteer, Angular, Git]
+      skills: [Node, Puppeteer, Angular, Git],
     },
     {
       href: Wedia.href,
@@ -505,13 +503,13 @@ export const state: stateModel = {
       endingDate: new Date(2023, 7),
       job: "Ingénieur Full stack",
       company: Wedia,
-      description: `<p>J'interviens sur l'outils phare développé et maintenu par Wedia, un DAM (Data Access Management).</br>
-        Respect récurrent de dead-lines courtes grâce à des pics de charge.</br>
+      description: `<p>J'interviens sur l'outil phare développé et maintenu par Wedia, un DAM (Data Access Management).</br>
+        - Respect récurrent de dead-lines courtes grâce à des pics de charge.</br>
         - Création/modification des plugins Gradle afin de traiter automatiquement certaines tâches ou modifications de données, ou alors l'envoi de mails générés automatiquement à l'aide de template.</br>
         - Montées de version du Front et du Back-Office en gardant la compatibilité ascendante.</br>
         - Livraisons en intégration et en pré-prod (Déploiements d’archives avec création et configuration suivant le contexte/cible).</br>
         - Création/maintenance de documentation pour assurer la passation/unité de connaissances.</p>`,
-      skills: [Java, Vue, Git, Gradle]
+      skills: [Java, Vue, Git, Gradle],
     },
     {
       href: Oxyl.href,
@@ -520,13 +518,28 @@ export const state: stateModel = {
       company: Oxyl,
       description: `<p>J'arrive à l'initialisation d'un projet à but d'aider les personnes à s'autoformer.</br>
         Cette application est en interaction avec des IA génératives.</br>
-        Si je souhaite me préparer à un entretien, découvrir une technologie, valider mes connaissances,... je peux intéragir avec les IA qui me feront un retour ou me généreront un programme et seront capables de m'interroger et me corriger.</br>
+        Si je souhaite me préparer à un entretien, découvrir une technologie, valider mes connaissances...</br> 
+        On peut intéragir avec les IA qui feront un retour ou généreront un programme et seront capables d'interroger ou encore de corriger l'utilisateur.</br>
         J'interviens sur:</br>
         - La mise en place des bonnes pratiques</br>
         - Choix des technologies, priorisation, solutions techniques</br>
         - Développement des différents serveur.</br>
         - Participation aux événements de la vie de projet dans un contexte d'agilité.</p>`,
-        skills: [Java, Spring, Hibernate, React, Vue, Node, H2, Git, GitLab, Docker, SQL, AWS, Maven]
+      skills: [
+        Java,
+        Spring,
+        Hibernate,
+        React,
+        Vue,
+        Node,
+        H2,
+        Git,
+        GitLab,
+        Docker,
+        SQL,
+        AWS,
+        Maven,
+      ],
     },
   ],
   projects: [
@@ -534,10 +547,10 @@ export const state: stateModel = {
       href: "https://github.com/CyrilPERIE/portfolio-app",
       title: "Site portfolio",
       spitch: "Site vitrine",
-      content: `Bienvenue sur mon site et merci d'avoir lu jusqu'ici. Puisque je trouve qu'un site est plus parlant qu'un CV en une page, j'ai créé mon propre site sur lequel centraliser mes projets et donner de la visibilité à mon profil et mon travail.`,
+      content: `Bienvenue sur mon site et merci d'avoir lu jusqu'ici. Puisque je trouve qu'un site est plus parlant qu'un CV en une page, j'ai créé mon propre hub sur lequel centraliser mes projets et donner de la visibilité à mon profil et mon travail.`,
       screenshot: "/assets/portfolio.png",
       alt: "portfolio",
-      skills: [TailwindCSS, NextJs, Figma, Vercel]
+      skills: [TailwindCSS, NextJs, Figma, Vercel],
     },
     {
       href: "https://galop-ai.vercel.app/",
@@ -546,16 +559,34 @@ export const state: stateModel = {
       content: `Basée sur l’API publique fournie par le PMU, j’ai développée des IA afin de m’aider à parier quotidiennement sur les courses hippiques. Ce projet me sert encore aujourd’hui de support pour ma veille technologique.`,
       screenshot: "/assets/e_pmu.png",
       alt: "e-pmu",
-      skills: [React, Next, Python, Flask, Fast, NumPy, Pandas, SKlearn, Git, GitLab, Docker, SQL, AWS, Maven, Express, Vercel, Redux]
+      skills: [
+        React,
+        Fast,
+        Python,
+        Flask,
+        NumPy,
+        Pandas,
+        SKlearn,
+        Git,
+        GitLab,
+        Docker,
+        SQL,
+        AWS,
+        Maven,
+        Express,
+        Vercel,
+        Redux,
+      ],
     },
     {
       href: "https://github.com/CyrilPERIE/images",
       title: "Images génératrices d'image",
       spitch: "Mosaïque d'images reproduisant une image fournie",
-      content: "Première utilisation concrète de mes apprentissages pour un projet. L'idée était de créer une première base de données et être capable d'intéragir avec pour ambition d'être capable de créer une image qui me représente avec des images qui me représentent. Une amélioration pourrait être de fournir une interface utilisateur ainsi que d'optimiser le temps de traitement de la demande.",
+      content:
+        "Première utilisation concrète de mes apprentissages pour un projet. L'idée était de créer une première base de données et être capable d'intéragir avec pour ambition d'être capable de créer une image qui me représente avec des images qui me représentent. Une amélioration pourrait être de fournir une interface utilisateur ainsi que d'optimiser le temps de traitement de la demande.",
       screenshot: "/assets/images.png",
       alt: "image",
-      skills: [Python, NumPy, SQL]
-    }
+      skills: [Python, NumPy, SQL],
+    },
   ],
 };
