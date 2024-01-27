@@ -17,6 +17,6 @@ export function differenceBetweenTwoDates(startingDate: Date, endingDate?: Date)
   }
   const years = endingDate.getFullYear() - startingDate.getFullYear();
   const months = endingDate.getMonth() - startingDate.getMonth();
-  return years > 0 ? `${years} ${years > 1 ? "ans" : "an"} et ${months} mois` : `${months} mois`
+  return years > 0 ? `${years} ${years > 1 ? "ans" : "an"} et ${Math.abs(months)} mois` : `${months} mois`
 }
   

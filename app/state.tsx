@@ -3,8 +3,14 @@ export type Certification = {
   logoUrl: string;
   alt: string;
   href: string;
-  obtainedDate: Date;
+  obtainedDate: number;
 };
+
+export type Formation = {
+  name: string;
+  yearStarting?: number;
+  yearEnding: number;
+}
 
 export type Link = {
   logoUrl: string;
@@ -19,6 +25,7 @@ export type Me = {
   catchPhrase: string;
   professionalContext: string;
   certification: Certification[];
+  formation: Formation[];
   links: Link[];
   skill: Skill[];
   softSkill: SoftSkill[];
@@ -125,6 +132,41 @@ const Java: Skill = {
   stack: Stack.Java,
 };
 
+const TailwindCSS: Skill = {
+  name: "TailwindCSS",
+  href: "https://tailwindcss.com/",
+  type: Type.Front,
+  stack: Stack.FrameworkFront
+}
+
+const NextJs: Skill = {
+  name: "NextJs",
+  href: "https://nextjs.org/",
+  type: Type.Front,
+  stack: Stack.FrameworkFront
+}
+
+const Figma: Skill = {
+  name: "Figma",
+  href: "https://www.figma.com/",
+  type: Type.GestionDeProjet,
+  stack: Stack.GestionDeProjet
+}
+
+const Vercel: Skill = {
+  name: "Vercel",
+  href: "https://vercel.com/",
+  type: Type.Infrastructure,
+  stack: Stack.Infrastructure
+}
+
+const Gradle: Skill = {
+  name: "Gradle",
+  href: "https://gradle.org/",
+  type: Type.Infrastructure,
+  stack: Stack.Infrastructure
+}
+
 const H2: Skill = {
   name: "H2",
   href: "https://www.h2database.com/html/main.html",
@@ -132,12 +174,26 @@ const H2: Skill = {
   stack: Stack.Java,
 };
 
+const Redux: Skill = {
+  name: "Redux",
+  href: "https://redux.js.org/",
+  type: Type.Front,
+  stack: Stack.FrameworkFront
+}
+
 const Vue: Skill = {
   name: "Vue",
   href: "https://vuejs.org/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
 };
+
+const Jenkins: Skill = {
+  name: "Jenkins",
+  href: "https://www.jenkins.io/",
+  type: Type.Infrastructure,
+  stack: Stack.Infrastructure
+}
 
 const Angular: Skill = {
   name: "Angular",
@@ -330,26 +386,30 @@ export const state: stateModel = {
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatum aut commodi ipsam numquam nesciunt iste, officiis dolorem modi distinctio necessitatibus quas soluta! Sit modi mollitia fuga dolore quisquam in. Quis, adipisci. Illum natus beatae reiciendis maxime voluptatibus adipisci perspiciatis! Exercitationem est quam ipsam voluptas officiis quaerat quae, libero assumenda! Repudiandae commodi quas exercitationem numquam similique nulla deleniti incidunt iste sunt sit placeat autem veritatis asperiores quam aspernatur, dolore voluptate alias delectus rerum, ipsam consequatur, velit quos. Doloremque, praesentium! Pariatur omnis non unde impedit dolorem libero, accusantium explicabo distinctio itaque corrupti repudiandae ullam velit, numquam laboriosam temporibus, veniam molestias error ipsum deserunt nemo obcaecati. Molestias animi minima placeat unde adipisci deserunt quod sapiente dolor ipsum fugiat eos delectus blanditiis, asperiores ducimus rem omnis est incidunt debitis esse molestiae obcaecati amet. Molestias iste facilis, minus adipisci, nostrum molestiae similique voluptates, ut alias soluta odio beatae temporibus facere modi exercitationem accusantium rem earum tenetur. Vero et hic ipsam? Est minima molestias voluptatibus, eaque eligendi soluta a deleniti iste enim dolores mollitia, expedita consectetur facere facilis vitae neque dolorum id unde quae? Neque architecto beatae animi minima, quidem vitae! Modi velit impedit fuga quisquam nulla, iure aliquid pariatur facere commodi porro recusandae accusamus.",
     certification: [
       {
-        name: "EIGSI - Diplôme d'ingénieur généraliste",
-        logoUrl: "/assets/eigsi_logo.jpg",
-        alt: "eigsi_logo",
-        href: "https://www.eigsi.fr/",
-        obtainedDate: new Date(2021),
-      },
-      {
         name: "OCA - Oracle Certified Associate",
         logoUrl: "/assets/OCA_logo.png",
         href: "https://education.oracle.com/oracle-certified-associate-java-se-8-programmer/trackp_333",
         alt: "OCA_logo",
-        obtainedDate: new Date(2023),
+        obtainedDate: 2023,
       },
       {
         name: "OCP - Oracle Certified Professional",
         logoUrl: "/assets/OCP_logo.png",
         href: "https://education.oracle.com/fr/oracle-certified-professional-java-se-8-programmer/trackp_357",
         alt: "OCP_logo",
-        obtainedDate: new Date(2024),
+        obtainedDate: 2024,
       },
+    ],
+    formation: [
+      {
+        name: "EIGSI - Diplôme d'ingénieur généraliste Spécialité industrie 4.0",
+        yearStarting: 2015,
+        yearEnding: 2021
+      },
+      {
+        name: "BAC S",
+        yearEnding: 2015
+      }
     ],
     links: [
       {
@@ -411,10 +471,8 @@ export const state: stateModel = {
       job: "Développeur Python",
       company: ClubMed,
       description: `<p>Première découverte du monde informatique, je réalise des scripts au besoin pour l'équipe à laquelle je suis intégrée.</br>
-            - Gestion de données</br>
-            - Web Scraping</br>
-            - Manipulation de fichiers Excel</p>`,
-      skills: [Python, Pandas, NumPy]
+            Gestion de données, Web Scraping, Manipulation de fichiers Excel</p>`,
+      skills: [Python, Pandas, NumPy, Selenium]
     },
     {
       href: ClubMed.href,
@@ -422,13 +480,13 @@ export const state: stateModel = {
       endingDate: new Date(2022, 9),
       job: "Techlead développeur QA",
       company: ClubMed,
-      description: `<p>J'interviens sur différents outils internes Club Med pour mettre en place des tests automatiques fonctionnels de non régression et les intégrer aux processus de mise en production:</br>
-            - Choix des outils à utiliser</br>
-            - Mise en place de l'usine logicielle</br>
-            - Mise en place des parcours de test</br>
-            - Développement des différents parcours</br>
-            - Mise en place des processus de développement</p>`,
-        skills: [Git, GitLab, Jira, Selenium, Katalon, Puppeteer, ELK]
+      description: `<p>En charge de mettre en place des tests automatisés, d'abord au sein d'une
+        équipe puis dans une démarche globale pour Club Med.</br>
+        Intervention du début à la fin du processus. Choix des outils à utiliser, mise
+        en place de l'usine logicielle, mise en place des parcours de test,
+        développement des différents parcours et mise en place des processus de
+        développement</p>`,
+        skills: [Git, GitLab, Jira, Selenium, Katalon, Puppeteer, ELK, Jenkins]
     },
     {
       href: Oxyl.href,
@@ -453,7 +511,7 @@ export const state: stateModel = {
         - Montées de version du Front et du Back-Office en gardant la compatibilité ascendante.</br>
         - Livraisons en intégration et en pré-prod (Déploiements d’archives avec création et configuration suivant le contexte/cible).</br>
         - Création/maintenance de documentation pour assurer la passation/unité de connaissances.</p>`,
-      skills: [Java, Vue, Git]
+      skills: [Java, Vue, Git, Gradle]
     },
     {
       href: Oxyl.href,
@@ -473,13 +531,31 @@ export const state: stateModel = {
   ],
   projects: [
     {
+      href: "https://github.com/CyrilPERIE/portfolio-app",
+      title: "Site portfolio",
+      spitch: "Site vitrine",
+      content: `Bienvenue sur mon site et merci d'avoir lu jusqu'ici. Puisque je trouve qu'un site est plus parlant qu'un CV en une page, j'ai créé mon propre site sur lequel centraliser mes projets et donner de la visibilité à mon profil et mon travail.`,
+      screenshot: "/assets/portfolio.png",
+      alt: "portfolio",
+      skills: [TailwindCSS, NextJs, Figma, Vercel]
+    },
+    {
       href: "https://galop-ai.vercel.app/",
       title: "E-PMU",
       spitch: "Application de statistiques hippiques",
       content: `Basée sur l’API publique fournie par le PMU, j’ai développée des IA afin de m’aider à parier quotidiennement sur les courses hippiques. Ce projet me sert encore aujourd’hui de support pour ma veille technologique.`,
       screenshot: "/assets/e_pmu.png",
       alt: "e-pmu",
-      skills: [React, Next, Python, Flask, Fast, NumPy, Pandas, SKlearn, Git, GitLab, Docker, SQL, AWS, Maven]
+      skills: [React, Next, Python, Flask, Fast, NumPy, Pandas, SKlearn, Git, GitLab, Docker, SQL, AWS, Maven, Express, Vercel, Redux]
     },
+    {
+      href: "https://github.com/CyrilPERIE/images",
+      title: "Images génératrices d'image",
+      spitch: "Mosaïque d'images reproduisant une image fournie",
+      content: "Première utilisation concrète de mes apprentissages pour un projet. L'idée était de créer une première base de données et être capable d'intéragir avec pour ambition d'être capable de créer une image qui me représente avec des images qui me représentent. Une amélioration pourrait être de fournir une interface utilisateur ainsi que d'optimiser le temps de traitement de la demande.",
+      screenshot: "/assets/images.png",
+      alt: "image",
+      skills: [Python, NumPy, SQL]
+    }
   ],
 };

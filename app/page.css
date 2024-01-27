@@ -22,10 +22,15 @@ p {
     font-weight: 400;
 }
 
+::selection {
+    background-color: #2A748B;
+    color: #FFFFFF
+}
+
 .scrollbar::-webkit-scrollbar {
     width: 4px;
-  }
+}
   
-  .scrollbar::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
     background: #2A748B;
-  }
+}
