@@ -139,8 +139,8 @@ const TailwindCSS: Skill = {
   stack: Stack.FrameworkFront,
 };
 
-const NextJs: Skill = {
-  name: "NextJs",
+const Next: Skill = {
+  name: "Next",
   href: "https://nextjs.org/",
   type: Type.Front,
   stack: Stack.FrameworkFront,
@@ -550,7 +550,7 @@ export const state: stateModel = {
       content: `Bienvenue sur mon site et merci d'avoir lu jusqu'ici. Puisque je trouve qu'un site est plus parlant qu'un CV en une page, j'ai créé mon propre hub sur lequel centraliser mes projets et donner de la visibilité à mon profil et mon travail.`,
       screenshot: "/assets/portfolio.png",
       alt: "portfolio",
-      skills: [TailwindCSS, NextJs, Figma, Vercel],
+      skills: [TailwindCSS, Next, Figma, Vercel],
     },
     {
       href: "https://galop-ai.vercel.app/",
