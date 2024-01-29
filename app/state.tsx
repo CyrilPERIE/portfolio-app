@@ -374,14 +374,15 @@ export const state: stateModel = {
   me: {
     name: "Cyril PERIE",
     wantedJob: "Ingénieur informatique",
-    catchPhrase: `Passionné et formé en autodidacte`,
-    professionalContext: `<p>C'est à la suite d'un module Java prodigué par mon école que mon intérêt pour le développement informatique a commencé. Je suis resté dans une formation généraliste pour avoir des connaissances larges tout en me formant au développement en réalisant des petits projets ou codingames sur mon temps libre.</p></br>
-    <p>L'infomatique me permet de laisser libre cours à mon imagination pour aider ou rendre le quotidien ludique</p>
-    <p>De par la logique il est rapidement possible de faire des choses en ayant les bases, contrairement à d'autres matières où tout repose sur de la connaissance.</p>
-    <p>Cela fait maintenant 3 ans que j'ai réussi à intégrer ce milieu qui me passione et ai réussi à monter rapidement en réponsabilité dès ma première mission.</p></br>
-    <p>Si au début ma carrière était guidée par mes ambitions, cherchant à apprendre du monde professionel pour gagner en autonomie sur mon temps personnel pour mes idées, je me rends compte aujourd'hui que j'aime l'envergure et le relationnel des projets professionels.</p>
-    <p>C'est pour cela que je suis plus attiré par le projet que les technologies utilisées afin d'être entièrement stimulé dans ma créativité et motivation.</p>
-    <p>N'hésitez pas à me contacter pour toute demande professionnelle</p>`,
+    catchPhrase: `Passionné et curieux de nature`,
+    professionalContext: `
+    <p>Mon intérêt pour le développement informatique a pris forme à la suite d'un module Java dispensé par mon école. Bien que j'aie suivi une formation généraliste pour acquérir des connaissances étendues, j'ai également poursuivi des apprentissages en autodidacte à travers des cours en ligne, des projets, et des codingames pendant mes moments de temps libre, au-delà de mon cursus d'ingénieur.</p></br>
+    <p>L'informatique me donne la possibilité d'exprimer librement mon imagination pour rendre le quotidien plus agréable ou pour aider autrui.</p>
+    <p>La logique inhérente à ce domaine permet d'accomplir rapidement des tâches avec une base solide, contrairement à d'autres matières où beaucoup plus de tâches reposent sur la connaissance.</p>
+    <p>Cela fait désormais trois ans que j'ai réussi à m'intégrer dans ce domaine qui me passionne, et dès ma première mission, j'ai pu évoluer rapidement en termes de responsabilités.</p></br>
+    <p>Si, au départ, ma carrière était motivée par mes ambitions personnelles, cherchant à apprendre du monde professionnel pour gagner en autonomie et consacrer mon temps personnel à mes idées, je réalise aujourd'hui que j'apprécie l'envergure et les relations humaines dans les projets professionnels.</p>
+    <p>C'est pourquoi je suis davantage attiré par le projet lui-même que par les technologies utilisées, afin de stimuler pleinement ma créativité et ma motivation.</p>
+    <p>N'hésitez pas à me contacter pour toute demande professionnelle.</p>`,
     certification: [
       {
         name: "OCA - Oracle Certified Associate",
@@ -467,9 +468,10 @@ export const state: stateModel = {
       startingDate: new Date(2018, 6),
       endingDate: new Date(2018, 7),
       job: "Développeur Python",
-      company: ClubMed,
-      description: `<p>Première découverte du monde informatique, je réalise des scripts au besoin pour l'équipe à laquelle je suis intégrée.</br>
-            Gestion de données, Web Scraping, Manipulation de fichiers Excel</p>`,
+      company: Gifi,
+      description: `
+      <p>Lors de ma première incursion dans le monde de l'informatique, j'élabore des scripts selon les besoins de l'équipe à laquelle je participe.</br>
+      Gestion de données, Web Scraping, Manipulation de fichiers Excel</p>`,
       skills: [Python, Pandas, NumPy, Selenium],
     },
     {
@@ -478,12 +480,8 @@ export const state: stateModel = {
       endingDate: new Date(2022, 9),
       job: "Techlead développeur QA",
       company: ClubMed,
-      description: `<p>En charge de mettre en place des tests automatisés, d'abord au sein d'une
-        équipe puis dans une démarche globale pour Club Med.</br>
-        Intervention du début à la fin du processus. Choix des outils à utiliser, mise
-        en place de l'usine logicielle, mise en place des parcours de test,
-        développement des différents parcours et mise en place des processus de
-        développement</p>`,
+      description: `<p>Responsable de l'implémentation de tests automatisés, d'abord au sein d'une équipe, puis dans une démarche globale pour Club Med.</br>
+      Intervention du début à la fin du processus, impliquant le choix des outils, l'établissement de l'usine logicielle, la création des parcours de test, le développement des différents scénarios, ainsi que la mise en place des processus de développement, la transmission de connaissances, et la documentation.</p>`,
       skills: [Git, GitLab, Jira, Selenium, Katalon, Puppeteer, ELK, Jenkins],
     },
     {
@@ -492,9 +490,9 @@ export const state: stateModel = {
       endingDate: new Date(2022, 11),
       job: "Ingénieur Full Stack",
       company: Oxyl,
-      description: `<p>Intervention sur un outil interne d'aide au développement commercial et recrutement d'Oxyl.</br>
-            Nous naviguons sur des sites à l'aide de scraper afin de récupérer des informations sur des sociétés et des profils de potentiels candidats.</br>
-            Ces informations sont évaluées et si pertinentes elles sont envoyées sur des interfaces pour recruteurs ou comerciaux.</p>`,
+      description: `<p>Participation au développement d'un outil interne visant à soutenir les activités commerciales et le recrutement chez Oxyl.</br>
+      Nous effectuons la navigation sur des sites à l'aide de scrappers pour extraire des informations sur des entreprises et des profils de candidats potentiels.</br>
+      Ces données sont ensuite évaluées, et si elles sont pertinentes, elles sont transmises aux interfaces destinées aux recruteurs ou aux commerciaux.</p>`,
       skills: [Node, Puppeteer, Angular, Git],
     },
     {
@@ -503,12 +501,13 @@ export const state: stateModel = {
       endingDate: new Date(2023, 7),
       job: "Ingénieur Full stack",
       company: Wedia,
-      description: `<p>J'interviens sur l'outil phare développé et maintenu par Wedia, un DAM (Data Access Management).</br>
-        - Respect récurrent de dead-lines courtes grâce à des pics de charge.</br>
-        - Création/modification des plugins Gradle afin de traiter automatiquement certaines tâches ou modifications de données, ou alors l'envoi de mails générés automatiquement à l'aide de template.</br>
-        - Montées de version du Front et du Back-Office en gardant la compatibilité ascendante.</br>
-        - Livraisons en intégration et en pré-prod (Déploiements d’archives avec création et configuration suivant le contexte/cible).</br>
-        - Création/maintenance de documentation pour assurer la passation/unité de connaissances.</p>`,
+      description: `
+      <p>J'interviens sur l'outil phare développé et maintenu par Wedia, un DAM (Data Access Management).</br>
+      - Respect récurrent de délais serrés grâce à des pics de charge.</br>
+      - Création/modification des plugins Gradle pour automatiser certaines tâches ou modifications de données, ainsi que l'envoi de mails générés automatiquement à l'aide de modèles.</br>
+      - Mises à niveau du Front et du Back-Office en assurant la compatibilité ascendante.</br>
+      - Livraisons en intégration et en pré-production (Déploiements d’archives avec création et configuration adaptées au contexte/cible).</br>
+      - Création/maintenance de documentation pour assurer la passation et l'uniformité des connaissances.</p>`,
       skills: [Java, Vue, Git, Gradle],
     },
     {
@@ -516,15 +515,16 @@ export const state: stateModel = {
       startingDate: new Date(2023, 8),
       job: "Ingénieur Full stack",
       company: Oxyl,
-      description: `<p>J'arrive à l'initialisation d'un projet à but d'aider les personnes à s'autoformer.</br>
-        Cette application est en interaction avec des IA génératives.</br>
-        Si je souhaite me préparer à un entretien, découvrir une technologie, valider mes connaissances...</br> 
-        On peut intéragir avec les IA qui feront un retour ou généreront un programme et seront capables d'interroger ou encore de corriger l'utilisateur.</br>
-        J'interviens sur:</br>
-        - La mise en place des bonnes pratiques</br>
-        - Choix des technologies, priorisation, solutions techniques</br>
-        - Développement des différents serveur.</br>
-        - Participation aux événements de la vie de projet dans un contexte d'agilité.</p>`,
+      description: `
+      <p>J'aborde l'initialisation d'un projet visant à faciliter l'autoformation des individus.</br>
+      Cette application interagit avec des IA génératives.</br>
+      Que ce soit pour se préparer à un entretien, découvrir une technologie, ou valider des connaissances...</br> 
+      Les utilisateurs peuvent interagir avec les IA, qui fourniront des retours, généreront des programmes, et auront la capacité d'interroger ou de corriger l'utilisateur.</br>
+      Mes contributions incluent :</br>
+      - La mise en place des bonnes pratiques.</br>
+      - Le choix des technologies, la priorisation, les solutions techniques.</br>
+      - Le développement des différents serveurs.</br>
+      - La participation aux événements du cycle de vie du projet dans un contexte agile.</p>`,
       skills: [
         Java,
         Spring,
@@ -547,7 +547,7 @@ export const state: stateModel = {
       href: "https://github.com/CyrilPERIE/portfolio-app",
       title: "Site portfolio",
       spitch: "Site vitrine",
-      content: `Bienvenue sur mon site et merci d'avoir lu jusqu'ici. Puisque je trouve qu'un site est plus parlant qu'un CV en une page, j'ai créé mon propre hub sur lequel centraliser mes projets et donner de la visibilité à mon profil et mon travail.`,
+      content: `Bienvenue sur mon site, et merci d'avoir pris le temps de lire jusqu'ici. Convaincu que l'expression d'un parcours est plus significative à travers un site que dans un CV d'une page, j'ai conçu mon propre hub. Celui-ci centralise mes projets, offrant ainsi une visibilité à mon profil et à mon travail.`,
       screenshot: "/assets/portfolio.png",
       alt: "portfolio",
       skills: [TailwindCSS, Next, Figma, Vercel],
@@ -556,7 +556,7 @@ export const state: stateModel = {
       href: "https://galop-ai.vercel.app/",
       title: "E-PMU",
       spitch: "Application de statistiques hippiques",
-      content: `Basée sur l’API publique fournie par le PMU, j’ai développée des IA afin de m’aider à parier quotidiennement sur les courses hippiques. Ce projet me sert encore aujourd’hui de support pour ma veille technologique.`,
+      content: `En utilisant l'API publique fournie par le PMU, j'ai développé des intelligences artificielles (IA) pour m'assister dans mes paris quotidiens sur les courses hippiques. Ce projet continue de me servir aujourd'hui comme base pour ma veille technologique.`,
       screenshot: "/assets/e_pmu.png",
       alt: "e-pmu",
       skills: [
