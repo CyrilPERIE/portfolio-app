@@ -202,6 +202,13 @@ const Angular: Skill = {
   stack: Stack.FrameworkFront,
 };
 
+const BeautifulSoup4: Skill = {
+  name: "BeautifulSoup4",
+  href: "https://pypi.org/project/beautifulsoup4/",
+  type: Type.Scraping,
+  stack: Stack.Python
+}
+
 const React: Skill = {
   name: "React",
   href: "https://fr.legacy.reactjs.org/",
@@ -550,6 +557,15 @@ export const state: stateModel = {
     },
   ],
   projects: [
+    {
+      href: "https://gitlab.com/project-collab",
+      title: "Horse Radar",
+      spitch: "Centraliser les chevaux sur le marché",
+      content: "J'utilise playwright pour scraper les annonces de certains sites sur internet et stock les annonces dans une base de données via une API Java.",
+      screenshot: "/assets/horse-radar.png",
+      alt: "horse-radar",
+      skills: [Python, Java, Spring, Hibernate, BeautifulSoup4, Playwright],
+    },
     {
       href: "https://gitlab.com/project-collab",
       title: "Project collab",
