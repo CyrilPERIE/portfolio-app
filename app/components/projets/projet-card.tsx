@@ -19,10 +19,22 @@ export default function ProjetCard(projet: Project) {
     <div className="mb-[20px]">
       <div className="flex items-center">
         <div className="pl-3">
-          <a className='flex items-start gap-1 w-fit' href={projet.href} target="_blank" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            <h2>{projet.title}</h2>
-            <img className='h-[16px]' src={imageSrc} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>
-          </a>
+          <div className="flex items-center gap-2">
+            <a className='flex items-start gap-1 w-fit' href={projet.url_git} target="_blank" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+              <h2>{projet.title}</h2>
+              <img className='h-[16px]' src={imageSrc} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>
+            </a>
+            {projet.url_web ? 
+              <a target="_blank" href={projet.url_web}>
+                <img className='h-[22px]' src={'/assets/browser.svg'} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>
+              </a> 
+            : ""}
+            {projet.url_yt ? 
+              <a target="_blank" href={projet.url_yt}>
+                <img className='h-[22px]' src={'/assets/youtube.svg'} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>
+              </a> 
+            : ""}
+          </div>
           <h3>{projet.spitch}</h3>
           <div className="flex custom:flex-row flex-col gap-2 py-3 items-center">
             <img
