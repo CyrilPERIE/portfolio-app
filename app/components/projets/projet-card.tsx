@@ -20,10 +20,14 @@ export default function ProjetCard(projet: Project) {
       <div className="flex items-center">
         <div className="pl-3">
           <div className="flex items-center gap-2">
-            <a className='flex items-start gap-1 w-fit' href={projet.url_git} target="_blank" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <a className='flex items-start gap-1 w-fit'>
               <h2>{projet.title}</h2>
-              <img className='h-[16px]' src={imageSrc} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>
             </a>
+            {projet.url_git ? 
+              <a target="_blank" href={projet.url_git}>
+                <img className='h-[22px]' src={'/assets/github.svg'} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>
+              </a> 
+            : ""}
             {projet.url_web ? 
               <a target="_blank" href={projet.url_web}>
                 <img className='h-[22px]' src={'/assets/browser.svg'} style={{filter: "invert(35%) sepia(70%) saturate(396%) hue-rotate(148deg) brightness(99%) contrast(94%)"}}/>

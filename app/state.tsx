@@ -562,6 +562,7 @@ export const state: stateModel = {
     {
       url_git: "https://github.com/stars/CyrilPERIE/lists/e-pmu",
       url_web: "https://galop-ai.vercel.app/",
+      url_yt: "https://youtu.be/qixCdcYSn8E",
       title: "E-PMU",
       spitch: "Application de statistiques hippiques",
       content: `En utilisant l'API publique fournie par le PMU, j'ai développé des intelligences artificielles (IA) pour m'assister dans mes paris quotidiens sur les courses hippiques. Ce projet continue de me servir aujourd'hui comme base pour ma veille technologique.`,
