@@ -57,7 +57,7 @@ export default function Home() {
           <h3 dangerouslySetInnerHTML={{ __html: state.me.catchPhrase }} />
         </div>
 
-        <div className="flex flex-col gap-4 justify-center w-full pt-10">
+        <div className="flex flex-col gap-4 justify-center w-full pt-10zz">
           <RandomSkill />
           <div className="flex flex-row gap-4 justify-center w-full pb-3">
             {state.me.links.map((link, index) => (
@@ -84,7 +84,7 @@ export default function Home() {
       <div className="h-screen custom:w-[700px] custom:ml-[650px] p-[30px]">
         <div className="mt-2" dangerouslySetInnerHTML={{ __html: state.me.professionalContext }} />
         <div className="mt-[10px]">
-          <h1 className="mb-[5px]">Expérience</h1>
+          <h1 className="mb-[5px]">Expériences</h1>
           {state.resume
             .sort((a, b) => +b.startingDate - +a.startingDate)
             .map((experience, index) => (

@@ -120,6 +120,13 @@ const Oxyl: Company = {
   href: "https://www.oxyl.fr/",
 };
 
+const EducaTech: Company = {
+  name: "EducaTech",
+  logoUrl: "",
+  alt: "",
+  href: "",
+};
+
 const Wedia: Company = {
   name: "Wedia",
   logoUrl: "/assets/wedia_logo.webp",
@@ -160,6 +167,13 @@ const Vercel: Skill = {
   href: "https://vercel.com/",
   type: Type.Infrastructure,
   stack: Stack.Infrastructure,
+};
+
+const Strapi: Skill = {
+  name: "Strapi",
+  href: "https://strapi.io/",
+  type: Type.Back,
+  stack: Stack.Node,
 };
 
 const Gradle: Skill = {
@@ -529,6 +543,7 @@ export const state: stateModel = {
     {
       href: Oxyl.href,
       startingDate: new Date(2023, 8),
+      endingDate: new Date(2024, 2),
       job: "Ingénieur Full stack",
       company: Oxyl,
       description: `
@@ -555,6 +570,26 @@ export const state: stateModel = {
         SQL,
         AWS,
         Maven,
+      ],
+    },
+    {
+      href: EducaTech.href,
+      startingDate: new Date(2025, 0),
+      job: "TechLead Full stack",
+      company: EducaTech,
+      description: `
+      <p>EducaTech est une startup qui cherche à aider les élèves dans leurs révisions après une journée de cours en s'appuyant sur les IAs génératives.
+      Aide aux devoirs, validation de connaissances sont rendus plus simples grâce à la création d'un professeur virtuel qui aide, rend ludique les devoirs du soir.</br>
+      Dans une première démarche de réussir à remplir les besoins des collégiens/lycéens, j'arrive avant la création de la startup afin de transformer les besoins métiers en 
+      solutions techniques et de les implémenter pour préparer au mieux avant le lancement officiel des développement en mars 2025.</p>`,
+      skills: [
+        React,
+        Strapi,
+        TailwindCSS,
+        Node,
+        Git,
+        Docker,
+        SQL,
       ],
     },
   ],
