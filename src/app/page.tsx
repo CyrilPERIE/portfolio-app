@@ -5,11 +5,11 @@ import Contact from "@/src/components/contact";
 
 export default function Home() {
   return (
-    <div>
-      <Hero className="mb-6" />
-      <Products className="mb-6" />
-      <Projets className="mb-6" />
-      <Contact className="mb-6" />
+    <div className="flex flex-col gap-10 sm:gap-12">
+      <Hero />
+      <Products />
+      <Projets />
+      <Contact />
     </div>
   );
 }

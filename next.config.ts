@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Par défaut l'indicateur de dev se place en bas à gauche, au-dessus de la
+  // barre de contact flottante sur mobile.
+  devIndicators: {
+    position: "top-right",
+  },
 };
 
 export default nextConfig;

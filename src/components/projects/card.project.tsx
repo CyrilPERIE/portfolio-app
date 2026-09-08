@@ -40,10 +40,10 @@ const CardProject = ({
         </div>
       </CardHeader>
       <CardContent className="my-auto">
-        <p className="text-md font-medium">{project.title}</p>
+        <p className="text-base font-medium">{project.title}</p>
         <p className="text-sm text-muted-foreground">{project.description}</p>
       </CardContent>
-      <CardFooter className="flex flex-row gap-2 overflow-x-auto">
+      <CardFooter className="flex flex-wrap gap-2">
         {project.tools.map((tool) => (
           <Badge key={tool} variant="outline">
             {tool}

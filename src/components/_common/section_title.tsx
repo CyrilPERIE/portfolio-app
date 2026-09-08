@@ -1,10 +1,21 @@
-import { Separator } from "@/src/ui/separator"
+import { Separator } from "@/src/ui/separator";
 
-export const SectionTitle = ({ title, subtitle }: { title: string, subtitle: string }) => {
-    return (
-        <div className="flex items-center gap-2">
-            <p className="text-xl font-bold mb-4 text-primary">{title} <span className="text-muted-foreground text-base">{subtitle.toUpperCase()}</span></p>
-            <Separator className="bg-border flex-1" />
-        </div>
-    )
-}
+export const SectionTitle = ({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) => {
+  return (
+    <div className="mb-4 flex min-w-0 items-center gap-2">
+      <p className="shrink-0 text-lg font-bold text-primary sm:text-xl">
+        {title}{" "}
+        <span className="text-sm text-muted-foreground sm:text-base">
+          {subtitle.toUpperCase()}
+        </span>
+      </p>
+      <Separator className="min-w-0 flex-1 bg-border" />
+    </div>
+  );
+};

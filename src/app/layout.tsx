@@ -23,16 +23,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="fr">
       <body
         className={cn(
-          "flex flex-col min-h-screen antialiased",
+          "flex min-h-screen flex-col antialiased font-sans",
           fontSans.variable,
           fontMono.variable,
         )}
       >
-          <div className="lg:px-82 sm:px-4 lg:pt-6 sm:pt-4 mb-4">
-            <div className="min-h-full flex flex-col px-4 sm:px-2 lg:px-0">
-              {children}
-            </div>
-          </div>
+        <div className="mx-auto w-full max-w-5xl px-4 py-4 pb-28 sm:px-6 sm:py-6 sm:pb-28 lg:px-8 lg:pt-8">
+          {children}
+        </div>
       </body>
     </html>
   );

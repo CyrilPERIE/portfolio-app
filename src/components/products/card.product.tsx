@@ -32,7 +32,7 @@ const CardProduct = ({
         <CardTitle>{product.title}</CardTitle>
         <CardDescription>{product.description}</CardDescription>
       </CardContent>
-      <CardFooter className="flex items-center gap-2">
+      <CardFooter className="flex flex-wrap items-center gap-2">
           {product.tools.map((tool, index) => (
             <Badge key={index}>{tool}</Badge>
           ))}
