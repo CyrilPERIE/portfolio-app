@@ -40,7 +40,7 @@ export const ContactVisibility = ({
       <div ref={footerRef}>{footer}</div>
       <div
         className={cn(
-          "transition-opacity duration-300 ease-in-out",
+          "fixed inset-x-4 bottom-4 z-50 mx-auto flex max-w-lg justify-center transition-opacity duration-300 ease-in-out",
           isFooterInView ? "pointer-events-none opacity-0" : "opacity-100",
         )}
       >
