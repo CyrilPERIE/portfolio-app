@@ -163,6 +163,10 @@ export const text: Text = {
             title: 'GitHub',
             href: `https://github.com/CyrilPERIE`,
         },
+        linkedin: {
+            title: 'LinkedIn',
+            href: `https://www.linkedin.com/in/cyril-perie/`,
+        },
     }
 };
 
@@ -207,6 +211,10 @@ export interface Text {
             href: string;
         },
         email: {
+            title: string;
+            href: string;
+        },
+        linkedin: {
             title: string;
             href: string;
         },

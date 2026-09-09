@@ -20,6 +20,7 @@ const FooterContact = ({ className }: { className?: string }) => {
   const googleHref = text.contact.google.href;
   const githubHref = text.contact.github.href;
   const emailHref = text.contact.email.href;
+  const linkedinHref = text.contact.linkedin.href;
   return (
     <Card className={cn(className)}>
       <CardHeader>
@@ -64,7 +65,7 @@ const FooterContact = ({ className }: { className?: string }) => {
         <p className="text-sm text-gray-500">Autres réseaux :</p>
         <div className="flex items-center gap-1">
           <Link
-            href={whatsappHref}
+            href={linkedinHref}
             target="_blank"
             className="border border-gray-300 py-2 px-4 rounded-full flex items-center justify-center gap-2"
           >
