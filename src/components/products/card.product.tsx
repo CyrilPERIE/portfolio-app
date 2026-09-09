@@ -28,7 +28,7 @@ const CardProduct = ({
       <CardHeader className="text-primary">
         {product.caption}
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1">
         <CardTitle>{product.title}</CardTitle>
         <CardDescription>{product.description}</CardDescription>
       </CardContent>
